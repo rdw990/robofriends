@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import CardList from '../components/CardList'
+// inport from file now not needed - AJAX
 // import {robots} from './robots'
 import {SearchBox} from '../components/SearchBox'
 import './App.css'
@@ -20,13 +21,11 @@ componentDidMount(){
       .then (users => this.setState({robots: users}) )
 }
 
-
   handleSearchChange = (e) => {
     // console.log(e.target.value)
     this.setState( {searchField: e.target.value})
   }
   
-
   render(){
     const filteredRobots = this.state.robots.filter( robot => {
       return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase())
