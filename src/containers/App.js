@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import CardList from '../components/CardList'
-// inport from file now not needed - AJAX
-// import {robots} from './robots'
+//  inport from file now not needed - AJAX
+//  import {robots} from './robots'
 import {SearchBox} from '../components/SearchBox'
 import './App.css'
 import Scroll from '../components/Scroll'
