@@ -3,8 +3,9 @@ import CardList from '../components/CardList'
 //  inport from file now not needed - AJAX
 //  import {robots} from './robots'
 import {SearchBox} from '../components/SearchBox'
-import './App.css'
 import Scroll from '../components/Scroll'
+import ErrorBoundry from '../components/ErrorBoundry'
+import './App.css'
 
 class App extends Component {
   constructor(){
@@ -38,7 +39,9 @@ componentDidMount(){
           <h1 className="f1">RoboFriends</h1>
           <SearchBox handleSearchChange={this.handleSearchChange}  />
           <Scroll>
-            <CardList robots={filteredRobots} />
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundry>
           </Scroll>
         </div>
       )
